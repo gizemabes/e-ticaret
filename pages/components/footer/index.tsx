@@ -13,10 +13,7 @@ import InputSearch from "../icon";
 
             <div style={{ display: "flex", flexDirection: 'column',padding:40, color: '#808080', justifyContent: 'space-around' }}>
                 <Image width={200} height={200} alt="logo" src='/images/paragrafsayfa.png' />
-               
                 <InputSearch />
-        
-      
             </div>
             <div>
                 <Image width={200} height={200} alt="logo" src='/images/sayfatasarım.png' />
