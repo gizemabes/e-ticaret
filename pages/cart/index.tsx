@@ -51,11 +51,11 @@ const Cart = () => {
                 }
 
             </div>
-            <div style={{ backgroundColor: '#f5f5f5', gridGap: '100px',padding:180,  }}>
+            <div style={{ backgroundColor: 'red', display: 'flex', justifyContent:'flex-start', gridGap: '100px',padding:180  }}>
                 <Button 
                   label="sepeti onayla"   style={{ backgroundColor: '#80CBC4', color: '#f5f5f5',padding:10,position:'relative',left:'1050px' }}/>
             </div>
-            </div>
+        </div>
 
             
         </div>

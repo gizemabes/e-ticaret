@@ -15,7 +15,7 @@ const wallet = () => {
 
                <div style={{ padding:10, justifyContent: 'center' ,position:'relative',right:'500px',display: "flex" , flexDirection: 'row'}}>
                <Image width={50} height={50} alt="logo" src='/images/cuzdanlogo.png' />
-               <Image style={{ padding:15}}
+               <Image style={{ padding:19}}
                width={100} height={0} alt="logo" src='/images/cuzdan.png' />
               
                </div>

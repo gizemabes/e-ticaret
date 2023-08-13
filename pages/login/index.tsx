@@ -2,11 +2,23 @@ import Header from "../components/Header"
 import Image from "next/image"
 import { Button } from 'primereact/button';
 import { InputText } from 'primereact/inputtext';
-
+import { useState } from "react";
+import Cookies from "js-cookie";
 
 
 
 const login = () => {
+    const [email, setEmail] = useState<string>('')
+    const [password, setPassword] = useState()
+
+
+
+    const handleLogin = () => {
+
+        //todo burada backende istek gonderilir istek dönen response uzerinden işlem yapılır.Backend servisi hazır değil
+        Cookies.set("loggedIn", "true");
+        console.log(Cookies.get('loggedIn'))
+    }
 
     return (
         <div style={{ backgroundColor: '#f5f5f5',display: "flex", flexDirection: 'column',justifyContent: 'space-around' }} >
@@ -26,12 +38,12 @@ const login = () => {
                  style={{ display: "flex", flexDirection: 'column',padding:14, color: '#808080', justifyContent: 'center',alignItems:'center',}}>
                  <Image width={200} height={200} alt="logo" src='/images/paragrafsayfa.png' />
                  <p>e mail giriniz </p>
-                 <input type="text" placeholder="" />
+                 <input type="text" placeholder="" value={email} onChange={(e) => setEmail(e.target.value)} />
                  <p>şifre giriniz </p>
                  <input type="text" placeholder="" />
 
                  <Button 
-                  label="giriş yap"   style={{ backgroundColor: '#80CBC4', color: 'white',padding:8, }}/>
+                  label="giriş yap" onClick={() => handleLogin()}  style={{ backgroundColor: '#80CBC4', color: 'white',padding:8, }}/>
                  </div>
                  
 
