@@ -4,7 +4,7 @@ import Image from "next/image"
 import { Button } from 'primereact/button';
 import CartProduct from "../components/cartProduct"
 import { InputNumber } from 'primereact/inputnumber';
-import InputSearch from "../icon";
+
 
 const data = [
     {
@@ -37,8 +37,7 @@ const Cart = () => {
                 </div>
             </div>
            
-            <div style={{ backgroundColor: '#f5f5f5',padding:'1px', flexDirection: 'column',justifyContent: "space-around"}}>
-            <div style={{ display: "flex", margin: 10, backgroundColor: '#fff', flexDirection: 'column', justifyContent: "center" }}>
+            <div style={{margin: 0, flexDirection: 'column', justifyContent: "center" ,backgroundColor:"#f5f5f5"}}>
 
                 {
                     data.map((item, key) => {
@@ -51,14 +50,15 @@ const Cart = () => {
                 }
 
             </div>
-            <div style={{ backgroundColor: 'red', display: 'flex', justifyContent:'flex-start', gridGap: '100px',padding:180  }}>
+            
+            
+            <div style={{ backgroundColor: '#f5f5f5', display: 'flex', justifyContent:'flex-start',padding:180 ,position:'relative' , top:'-10px' }}>
                 <Button 
-                  label="sepeti onayla"   style={{ backgroundColor: '#80CBC4', color: '#f5f5f5',padding:10,position:'relative',left:'1050px' }}/>
+                  label="sepeti onayla"   style={{ backgroundColor: '#80CBC4', color: '#f5f5f5',padding:10,position:'relative',left:'1050px', top:'-180px'}}/>
             </div>
         </div>
 
             
-        </div>
         
 )
        
