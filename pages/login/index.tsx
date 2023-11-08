@@ -4,20 +4,23 @@ import { Button } from 'primereact/button';
 import { InputText } from 'primereact/inputtext';
 import { useState } from "react";
 import Cookies from "js-cookie";
+import { useRouter } from "next/router";
 
 
 
 const login = () => {
     const [email, setEmail] = useState<string>('')
     const [password, setPassword] = useState()
+    const {push,} = useRouter() 
+
+   
 
 
 
     const handleLogin = () => {
 
         //todo burada backende istek gonderilir istek dönen response uzerinden işlem yapılır.Backend servisi hazır değil
-        Cookies.set("loggedIn", "true");
-        console.log(Cookies.get('loggedIn'))
+    
     }
 
     return (
@@ -43,7 +46,7 @@ const login = () => {
                  <input type="text" placeholder="" />
 
                  <Button 
-                  label="giriş yap" onClick={() => handleLogin()}  style={{ backgroundColor: '#80CBC4', color: 'white',padding:8, }}/>
+                  label="giriş yap" onClick={() => push('home')}  style={{ backgroundColor: '#80CBC4', color: 'white',padding:8, }}/>
                  </div>
                  
 

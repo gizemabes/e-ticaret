@@ -20,6 +20,7 @@ import InputSearch from "../icon";
 
             </div>
         </div>
+        
     )
 }
 
